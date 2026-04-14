@@ -1,0 +1,90 @@
+
+/* CSS */
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-top: 80px;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+.custom-nav {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: #c4b5fd;
+}
+
+.presentacion {
+  font-style: italic;
+}
+
+.profile-pic {
+  width: 120px;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.1);
+}
+
+/* ICON BUTTONS */
+.icon-btn {
+  font-size: 1.5rem;
+  color: #818cf8;
+  transition: 0.3s;
+}
+
+.icon-btn:hover {
+  color: #c4b5fd;
+  transform: scale(1.2);
+}
+
+/* PROJECT IMAGES */
+.project-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* CARDS */
+.custom-card {
+  background: #1e293b;
+  border: none;
+  color: #e2e8f0;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* ANIMACIONES */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
