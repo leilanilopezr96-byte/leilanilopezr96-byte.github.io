@@ -1,5 +1,5 @@
 
-/* CSS */
+
 
 @font-face {
   font-family: 'Montserrat';
@@ -31,13 +31,13 @@ section {
 h1, h2, h3 {
   color: #c4b5fd;
 }
-
+ /* PRESENTACIÓN Y FOTO */
 .presentacion {
   font-style: italic;
 }
 
 .profile-pic {
-  width: 120px;
+  width: 150px;
   border-radius: 50%;
   transition: transform 0.3s;
 }
@@ -46,7 +46,7 @@ h1, h2, h3 {
   transform: scale(1.1);
 }
 
-/* ICON BUTTONS */
+/* ICONOS DE REDES */
 .icon-btn {
   font-size: 1.5rem;
   color: #818cf8;
@@ -87,4 +87,72 @@ h1, h2, h3 {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* TIMELINE DE EXPERIENCIAS */
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  border-left: 2px solid #818cf8;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -9px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: #c4b5fd;
+  border-radius: 50%;
+}
+
+.timeline-content h5 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.timeline-content .date {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.timeline-content p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+}
+
+/*EDUCACIÓN*/
+.education-card {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.education-card span {
+  display: block;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+.education-card .date {
+  font-size: 0.8rem;
+  color: #818cf8;
+} 
+
+/*IDIOMAS*/
+.courses-list {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.language span {
+  font-size: 0.9rem;
 }
