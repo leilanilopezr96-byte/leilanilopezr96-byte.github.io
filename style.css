@@ -1,13 +1,36 @@
+/*FUENTES*/
 
-
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'Montserrat';
   src: url('fonts/Montserrat/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
 }
 
 body {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
   margin: 0;
   padding-top: 80px;
   background-color: #0f172a;
@@ -28,22 +51,50 @@ section {
   text-align: center;
 }
 
-h1, h2, h3 {
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
   color: #c4b5fd;
 }
+
+h2, h3 {
+  font-weight: 600;
+  color: #c4b5fd;
+}
+
  /* PRESENTACIÓN Y FOTO */
+
+#home {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(270deg, #0f172a, #1e293b, #0f172a);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
 .presentacion {
   font-style: italic;
+  font-size: 1.1rem;
+  color: #cbd5f5;
 }
 
 .profile-pic {
   width: 150px;
   border-radius: 50%;
   transition: transform 0.3s;
+  box-shadow: 0 0 25px rgba(129, 140, 248, 0.6);
 }
 
 .profile-pic:hover {
   transform: scale(1.1);
+  box-shadow: 0 0 40px rgba(196, 181, 253, 0.8);
 }
 
 /* ICONOS DE REDES */
@@ -114,7 +165,7 @@ h1, h2, h3 {
 
 .timeline-content h5 {
   margin: 0;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 .timeline-content .date {
@@ -127,13 +178,32 @@ h1, h2, h3 {
   font-size: 0.9rem;
 }
 
-/*EDUCACIÓN*/
+.experience-card {
+  background: #1e293b;
+  padding: 15px;
+  border-radius: 10px;
+  margin-left: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
+}
+
+.experience-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.experience-card .date {
+  font-size: 0.8rem;
+  color: #818cf8;
+} 
+
+/*EDUCACIÓN, CURSOS, IDIOMAS*/
 .education-card {
   background: #1e293b;
   padding: 15px;
   border-radius: 10px;
   margin-bottom: 15px;
-  text-align: left;
+  text-align: center;
 }
 
 .education-card span {
@@ -146,13 +216,3 @@ h1, h2, h3 {
   font-size: 0.8rem;
   color: #818cf8;
 } 
-
-/*IDIOMAS*/
-.courses-list {
-  text-align: left;
-  padding-left: 20px;
-}
-
-.language span {
-  font-size: 0.9rem;
-}
