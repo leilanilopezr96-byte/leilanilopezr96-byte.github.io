@@ -194,65 +194,89 @@ section {
   transform: scale(1.05); /*agranda imagen al pasar el cursor*/
 }
 
-
-
-
-
-
+/*PRESENTACIÓN*/
 .presentacion {
   font-style: italic;
   font-size: 1.1rem;
   color: #cbd5f5;
+  max-width: 500px;
+  margin: 0 auto 1rem;
+}
+
+.contacto p {
+  color: var(--color-text-sec);
+  margin: 4px 0;
+  font-size: 0.95rem;
 }
 
 /* ICONOS DE REDES */
 .icon-btn {
   font-size: 1.5rem;
-  color: #818cf8;
-  transition: 0.3s;
+  color: var(--color-purple);
+  transition: color 0.3s, transform 0.3s, filter 0.3s; /*cambio suave de color, tamaño y sombra*/
+  text-decoration: none; /*elimina subrayado de enlaces*/
 }
 
 .icon-btn:hover {
-  color: #c4b5fd;
-  transform: scale(1.2);
-}
-
-/* PROJECT IMAGES */
-.project-img {
-  height: 200px;
-  object-fit: cover;
+  color: var(--color-pink);
+  transform: scale(1.2) translateY(-2px);
+  filter: drop-shadow(0 0 8px var(--glow-pink));
 }
 
 /* CARDS */
 .custom-card {
-  background: #1e293b;
-  border: none;
-  color: #e2e8f0;
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: var(--color-bg-card);
+  border: 1px solid rgba(196, 181, 253, 0.1);
+  color: var(--color-text);
+  border-radius: 12px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
 }
 
 .custom-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 30px var(--glow-purple);
+  border-color: rgba(196, 181, 253, 0.3); /*trancision suave, sombra y color del borde*/
 }
 
-/* ANIMACIONES */
+/* PROYECTOS*/
+/*imagenes*/
+.project-img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0; /*solo se redondea arriba para que coincida con la card*/
+}
+/*botones*/
+.btn-outline-light {
+  border-color: rgba(196, 181, 253, 0.4) !important;
+  color: var(--color-lila) !important; /*color texto*/
+  transition: all 0.3s ease; /*transición suave para todos los cambios*/
+}
+.btn-outline-light:hover {
+  background: var(--color-purple) !important;
+  border-color: var(--color-purple) !important; /*cambios de colro al pasar cursor*/
+  color: white !important;
+  box-shadow: 0 0 15px var(--glow-purple); /*efecto glow*/
+}
+
+/* ANIMACIONES FADE-IN para cada sección*/
 .fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
+  opacity: 0; /*elemento comienza transparente*/
+  transform: translateY(20px); /*elemento comienza ligeramente desplazado hacia abajo*/
+  transition: all 0.6s ease-out; /*transición suave para opacidad y posición*/
 }
 
 .fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1; /*elemento se vuelve completamente visible*/
+  transform: translateY(0); /*elemento vuelve a su posición original*/
 }
 
 /* TIMELINE DE EXPERIENCIAS */
 .timeline {
   position: relative;
   margin-left: 20px;
-  border-left: 2px solid #818cf8;
+  border-left: 2px solid;
+  border-image: linea;
+
 }
 
 .timeline-item {
